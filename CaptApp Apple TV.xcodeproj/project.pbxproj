@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F6380611C2E24D60051F986 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380601C2E24D60051F986 /* main.m */; };
+		1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380631C2E24D60051F986 /* AppDelegate.m */; };
+		1F6380671C2E24D60051F986 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380661C2E24D60051F986 /* ViewController.m */; };
+		1F63806A1C2E24D60051F986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6380681C2E24D60051F986 /* Main.storyboard */; };
+		1F63806C1C2E24D60051F986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F63806B1C2E24D60051F986 /* Assets.xcassets */; };
+		1F6380771C2E24D60051F986 /* CaptApp_Apple_TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380761C2E24D60051F986 /* CaptApp_Apple_TVTests.m */; };
+		1F6380821C2E24D70051F986 /* CaptApp_Apple_TVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380811C2E24D70051F986 /* CaptApp_Apple_TVUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F6380731C2E24D60051F986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F6380541C2E24D60051F986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F63805B1C2E24D60051F986;
+			remoteInfo = "CaptApp Apple TV";
+		};
+		1F63807E1C2E24D60051F986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F6380541C2E24D60051F986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F63805B1C2E24D60051F986;
+			remoteInfo = "CaptApp Apple TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F63805C1C2E24D60051F986 /* CaptApp Apple TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaptApp Apple TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6380601C2E24D60051F986 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F6380621C2E24D60051F986 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F6380631C2E24D60051F986 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F6380651C2E24D60051F986 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F6380661C2E24D60051F986 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1F6380691C2E24D60051F986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F63806B1C2E24D60051F986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F63806D1C2E24D60051F986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6380721C2E24D60051F986 /* CaptApp Apple TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CaptApp Apple TVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6380761C2E24D60051F986 /* CaptApp_Apple_TVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptApp_Apple_TVTests.m; sourceTree = "<group>"; };
+		1F6380781C2E24D60051F986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F63807D1C2E24D60051F986 /* CaptApp Apple TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CaptApp Apple TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6380811C2E24D70051F986 /* CaptApp_Apple_TVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptApp_Apple_TVUITests.m; sourceTree = "<group>"; };
+		1F6380831C2E24D70051F986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F6380591C2E24D60051F986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F63806F1C2E24D60051F986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F63807A1C2E24D60051F986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F6380531C2E24D60051F986 = {
+			isa = PBXGroup;
+			children = (
+				1F63805E1C2E24D60051F986 /* CaptApp Apple TV */,
+				1F6380751C2E24D60051F986 /* CaptApp Apple TVTests */,
+				1F6380801C2E24D70051F986 /* CaptApp Apple TVUITests */,
+				1F63805D1C2E24D60051F986 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F63805D1C2E24D60051F986 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F63805C1C2E24D60051F986 /* CaptApp Apple TV.app */,
+				1F6380721C2E24D60051F986 /* CaptApp Apple TVTests.xctest */,
+				1F63807D1C2E24D60051F986 /* CaptApp Apple TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F63805E1C2E24D60051F986 /* CaptApp Apple TV */ = {
+			isa = PBXGroup;
+			children = (
+				1F6380621C2E24D60051F986 /* AppDelegate.h */,
+				1F6380631C2E24D60051F986 /* AppDelegate.m */,
+				1F6380651C2E24D60051F986 /* ViewController.h */,
+				1F6380661C2E24D60051F986 /* ViewController.m */,
+				1F6380681C2E24D60051F986 /* Main.storyboard */,
+				1F63806B1C2E24D60051F986 /* Assets.xcassets */,
+				1F63806D1C2E24D60051F986 /* Info.plist */,
+				1F63805F1C2E24D60051F986 /* Supporting Files */,
+			);
+			path = "CaptApp Apple TV";
+			sourceTree = "<group>";
+		};
+		1F63805F1C2E24D60051F986 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F6380601C2E24D60051F986 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F6380751C2E24D60051F986 /* CaptApp Apple TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F6380761C2E24D60051F986 /* CaptApp_Apple_TVTests.m */,
+				1F6380781C2E24D60051F986 /* Info.plist */,
+			);
+			path = "CaptApp Apple TVTests";
+			sourceTree = "<group>";
+		};
+		1F6380801C2E24D70051F986 /* CaptApp Apple TVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F6380811C2E24D70051F986 /* CaptApp_Apple_TVUITests.m */,
+				1F6380831C2E24D70051F986 /* Info.plist */,
+			);
+			path = "CaptApp Apple TVUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F63805B1C2E24D60051F986 /* CaptApp Apple TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F6380861C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TV" */;
+			buildPhases = (
+				1F6380581C2E24D60051F986 /* Sources */,
+				1F6380591C2E24D60051F986 /* Frameworks */,
+				1F63805A1C2E24D60051F986 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CaptApp Apple TV";
+			productName = "CaptApp Apple TV";
+			productReference = 1F63805C1C2E24D60051F986 /* CaptApp Apple TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F6380711C2E24D60051F986 /* CaptApp Apple TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F6380891C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVTests" */;
+			buildPhases = (
+				1F63806E1C2E24D60051F986 /* Sources */,
+				1F63806F1C2E24D60051F986 /* Frameworks */,
+				1F6380701C2E24D60051F986 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F6380741C2E24D60051F986 /* PBXTargetDependency */,
+			);
+			name = "CaptApp Apple TVTests";
+			productName = "CaptApp Apple TVTests";
+			productReference = 1F6380721C2E24D60051F986 /* CaptApp Apple TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F63807C1C2E24D60051F986 /* CaptApp Apple TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F63808C1C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVUITests" */;
+			buildPhases = (
+				1F6380791C2E24D60051F986 /* Sources */,
+				1F63807A1C2E24D60051F986 /* Frameworks */,
+				1F63807B1C2E24D60051F986 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F63807F1C2E24D60051F986 /* PBXTargetDependency */,
+			);
+			name = "CaptApp Apple TVUITests";
+			productName = "CaptApp Apple TVUITests";
+			productReference = 1F63807D1C2E24D60051F986 /* CaptApp Apple TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F6380541C2E24D60051F986 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "CaptApp TV Network";
+				TargetAttributes = {
+					1F63805B1C2E24D60051F986 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					1F6380711C2E24D60051F986 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 1F63805B1C2E24D60051F986;
+					};
+					1F63807C1C2E24D60051F986 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 1F63805B1C2E24D60051F986;
+					};
+				};
+			};
+			buildConfigurationList = 1F6380571C2E24D60051F986 /* Build configuration list for PBXProject "CaptApp Apple TV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F6380531C2E24D60051F986;
+			productRefGroup = 1F63805D1C2E24D60051F986 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F63805B1C2E24D60051F986 /* CaptApp Apple TV */,
+				1F6380711C2E24D60051F986 /* CaptApp Apple TVTests */,
+				1F63807C1C2E24D60051F986 /* CaptApp Apple TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F63805A1C2E24D60051F986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F63806C1C2E24D60051F986 /* Assets.xcassets in Resources */,
+				1F63806A1C2E24D60051F986 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F6380701C2E24D60051F986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F63807B1C2E24D60051F986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F6380581C2E24D60051F986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6380671C2E24D60051F986 /* ViewController.m in Sources */,
+				1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */,
+				1F6380611C2E24D60051F986 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F63806E1C2E24D60051F986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6380771C2E24D60051F986 /* CaptApp_Apple_TVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F6380791C2E24D60051F986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6380821C2E24D70051F986 /* CaptApp_Apple_TVUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F6380741C2E24D60051F986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F63805B1C2E24D60051F986 /* CaptApp Apple TV */;
+			targetProxy = 1F6380731C2E24D60051F986 /* PBXContainerItemProxy */;
+		};
+		1F63807F1C2E24D60051F986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F63805B1C2E24D60051F986 /* CaptApp Apple TV */;
+			targetProxy = 1F63807E1C2E24D60051F986 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F6380681C2E24D60051F986 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F6380691C2E24D60051F986 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F6380841C2E24D70051F986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		1F6380851C2E24D70051F986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F6380871C2E24D70051F986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "CaptApp Apple TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F6380881C2E24D70051F986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "CaptApp Apple TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F63808A1C2E24D70051F986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "CaptApp Apple TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptApp Apple TV.app/CaptApp Apple TV";
+			};
+			name = Debug;
+		};
+		1F63808B1C2E24D70051F986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "CaptApp Apple TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptApp Apple TV.app/CaptApp Apple TV";
+			};
+			name = Release;
+		};
+		1F63808D1C2E24D70051F986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CaptApp Apple TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "CaptApp Apple TV";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1F63808E1C2E24D70051F986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CaptApp Apple TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "CaptApp Apple TV";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F6380571C2E24D60051F986 /* Build configuration list for PBXProject "CaptApp Apple TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6380841C2E24D70051F986 /* Debug */,
+				1F6380851C2E24D70051F986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F6380861C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6380871C2E24D70051F986 /* Debug */,
+				1F6380881C2E24D70051F986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F6380891C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F63808A1C2E24D70051F986 /* Debug */,
+				1F63808B1C2E24D70051F986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F63808C1C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F63808D1C2E24D70051F986 /* Debug */,
+				1F63808E1C2E24D70051F986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F6380541C2E24D60051F986 /* Project object */;
+}
