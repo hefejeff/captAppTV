@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1605" minimumToolsVersion="Xcode 7.0">
+    <entity name="Ports" representedClassName="Ports" syncable="YES">
+        <attribute name="logoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Report" representedClassName="Report" syncable="YES">
+        <attribute name="boatName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="boatRepCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="boatURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="captID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="captName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="captURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mate1ID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mate1Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mate1URL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mate2ID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mate2Name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mate2URL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="portMarina" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="vidID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="vidThmURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vidTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vidURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Ports" positionX="-63" positionY="99" width="128" height="75"/>
+        <element name="Report" positionX="-63" positionY="-18" width="128" height="300"/>
+    </elements>
+</model>

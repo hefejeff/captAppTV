@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>captAppTopShelf.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>1F63807C1C2E24D60051F986</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F64C4CE1C7D790F00712829</key>
 		<dict>
 			<key>primary</key>
 			<true/>

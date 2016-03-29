@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0829851C7635BA00A30621 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829791C7635BA00A30621 /* AFHTTPSessionManager.m */; };
+		1F0829861C7635BA00A30621 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F08297C1C7635BA00A30621 /* AFNetworkReachabilityManager.m */; };
+		1F0829871C7635BA00A30621 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F08297E1C7635BA00A30621 /* AFSecurityPolicy.m */; };
+		1F0829881C7635BA00A30621 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829801C7635BA00A30621 /* AFURLRequestSerialization.m */; };
+		1F0829891C7635BA00A30621 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829821C7635BA00A30621 /* AFURLResponseSerialization.m */; };
+		1F08298A1C7635BA00A30621 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829841C7635BA00A30621 /* AFURLSessionManager.m */; };
+		1F0829B31C76D22B00A30621 /* libAppLovinTVOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B21C76D22B00A30621 /* libAppLovinTVOS.a */; };
+		1F0829B51C76D27F00A30621 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B41C76D27F00A30621 /* AdSupport.framework */; };
+		1F0829B71C76D29300A30621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B61C76D29300A30621 /* CoreGraphics.framework */; };
+		1F0829B91C76D2A900A30621 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B81C76D2A900A30621 /* CoreMedia.framework */; };
+		1F0829BB1C76D2BF00A30621 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829BA1C76D2BF00A30621 /* StoreKit.framework */; };
+		1F0829BD1C76D2D200A30621 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829BC1C76D2D200A30621 /* SystemConfiguration.framework */; };
+		1F0829BF1C76D2E300A30621 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829BE1C76D2E300A30621 /* UIKit.framework */; };
+		1F0EA6341C3705A50069BFE0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0EA6331C3705A50069BFE0 /* AVKit.framework */; };
+		1F0EA6361C3705AC0069BFE0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0EA6351C3705AC0069BFE0 /* AVFoundation.framework */; };
+		1F0EA6381C3811AB0069BFE0 /* todd_marlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F0EA6371C3811AB0069BFE0 /* todd_marlin.jpg */; };
+		1F3D29CE1C8C855F00E35CAD /* todd_marlin_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D29CD1C8C855F00E35CAD /* todd_marlin_bkg.png */; };
+		1F4769FB1C83CF9E000B5B33 /* logo_CaptApp_white-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4769FA1C83CF9E000B5B33 /* logo_CaptApp_white-02.png */; };
 		1F6380611C2E24D60051F986 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380601C2E24D60051F986 /* main.m */; };
 		1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380631C2E24D60051F986 /* AppDelegate.m */; };
 		1F6380671C2E24D60051F986 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380661C2E24D60051F986 /* ViewController.m */; };
@@ -14,6 +32,20 @@
 		1F63806C1C2E24D60051F986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F63806B1C2E24D60051F986 /* Assets.xcassets */; };
 		1F6380771C2E24D60051F986 /* CaptApp_Apple_TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380761C2E24D60051F986 /* CaptApp_Apple_TVTests.m */; };
 		1F6380821C2E24D70051F986 /* CaptApp_Apple_TVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6380811C2E24D70051F986 /* CaptApp_Apple_TVUITests.m */; };
+		1F6380901C2E26020051F986 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F63808F1C2E26020051F986 /* logo.png */; };
+		1F6380921C2E275C0051F986 /* captapp_tv_logo-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6380911C2E275C0051F986 /* captapp_tv_logo-03.png */; };
+		1F64C4CA1C7D6B4600712829 /* leader-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F64C4C91C7D6B4600712829 /* leader-01.png */; };
+		1F64C4D11C7D790F00712829 /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F64C4D01C7D790F00712829 /* TVServices.framework */; };
+		1F64C4D51C7D790F00712829 /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F64C4D41C7D790F00712829 /* ServiceProvider.m */; };
+		1F64C4D91C7D790F00712829 /* captAppTopShelf.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F64C4CF1C7D790F00712829 /* captAppTopShelf.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1F64C4E01C7F59CB00712829 /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F64C4DF1C7F59CB00712829 /* LeaderBoardViewController.m */; };
+		1F65E56C1C75C50500878BDA /* captapp_aptv_logo_fin3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65E56B1C75C50500878BDA /* captapp_aptv_logo_fin3.png */; };
+		1F65E56E1C75C51500878BDA /* captapp_aptv_logo_fin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65E56D1C75C51500878BDA /* captapp_aptv_logo_fin2.png */; };
+		1F65E5701C75C53000878BDA /* captapp_aptv_logo_fin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65E56F1C75C53000878BDA /* captapp_aptv_logo_fin1.png */; };
+		1FA5B0721C90AA7B00F38F51 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0711C90AA7B00F38F51 /* MobileCoreServices.framework */; };
+		1FA5B0741C90AA8D00F38F51 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0731C90AA8D00F38F51 /* MediaPlayer.framework */; };
+		1FA5B0761C90AAC000F38F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0751C90AAC000F38F51 /* Foundation.framework */; };
+		1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +63,81 @@
 			remoteGlobalIDString = 1F63805B1C2E24D60051F986;
 			remoteInfo = "CaptApp Apple TV";
 		};
+		1F64C4D71C7D790F00712829 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F6380541C2E24D60051F986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F64C4CE1C7D790F00712829;
+			remoteInfo = captAppTopShelf;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F64C4DD1C7D790F00712829 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1F64C4D91C7D790F00712829 /* captAppTopShelf.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1F0829781C7635BA00A30621 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		1F0829791C7635BA00A30621 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		1F08297A1C7635BA00A30621 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		1F08297B1C7635BA00A30621 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		1F08297C1C7635BA00A30621 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		1F08297D1C7635BA00A30621 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		1F08297E1C7635BA00A30621 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		1F08297F1C7635BA00A30621 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		1F0829801C7635BA00A30621 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		1F0829811C7635BA00A30621 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		1F0829821C7635BA00A30621 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		1F0829831C7635BA00A30621 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		1F0829841C7635BA00A30621 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		1F0829981C76D22B00A30621 /* ALAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAd.h; sourceTree = "<group>"; };
+		1F0829991C76D22B00A30621 /* ALAdDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdDisplayDelegate.h; sourceTree = "<group>"; };
+		1F08299A1C76D22B00A30621 /* ALAdLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdLoadDelegate.h; sourceTree = "<group>"; };
+		1F08299B1C76D22B00A30621 /* ALAdRewardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdRewardDelegate.h; sourceTree = "<group>"; };
+		1F08299C1C76D22B00A30621 /* ALAdService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdService.h; sourceTree = "<group>"; };
+		1F08299D1C76D22B00A30621 /* ALAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdSize.h; sourceTree = "<group>"; };
+		1F08299E1C76D22B00A30621 /* ALAdType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdType.h; sourceTree = "<group>"; };
+		1F08299F1C76D22B00A30621 /* ALAdUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdUpdateDelegate.h; sourceTree = "<group>"; };
+		1F0829A01C76D22B00A30621 /* ALAdVideoPlaybackDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdVideoPlaybackDelegate.h; sourceTree = "<group>"; };
+		1F0829A11C76D22B00A30621 /* ALAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdView.h; sourceTree = "<group>"; };
+		1F0829A21C76D22B00A30621 /* ALAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAnnotations.h; sourceTree = "<group>"; };
+		1F0829A31C76D22B00A30621 /* ALErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALErrorCodes.h; sourceTree = "<group>"; };
+		1F0829A41C76D22B00A30621 /* ALEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEventService.h; sourceTree = "<group>"; };
+		1F0829A51C76D22B00A30621 /* ALEventTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEventTypes.h; sourceTree = "<group>"; };
+		1F0829A61C76D22B00A30621 /* ALIncentivizedInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIncentivizedInterstitialAd.h; sourceTree = "<group>"; };
+		1F0829A71C76D22B00A30621 /* ALInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALInterstitialAd.h; sourceTree = "<group>"; };
+		1F0829A81C76D22B00A30621 /* ALNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNativeAd.h; sourceTree = "<group>"; };
+		1F0829A91C76D22B00A30621 /* ALNativeAdLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNativeAdLoadDelegate.h; sourceTree = "<group>"; };
+		1F0829AA1C76D22B00A30621 /* ALNativeAdPrecacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNativeAdPrecacheDelegate.h; sourceTree = "<group>"; };
+		1F0829AB1C76D22B00A30621 /* ALNativeAdService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNativeAdService.h; sourceTree = "<group>"; };
+		1F0829AC1C76D22B00A30621 /* ALPostbackDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPostbackDelegate.h; sourceTree = "<group>"; };
+		1F0829AD1C76D22B00A30621 /* ALPostbackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPostbackService.h; sourceTree = "<group>"; };
+		1F0829AE1C76D22B00A30621 /* ALSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSdk.h; sourceTree = "<group>"; };
+		1F0829AF1C76D22B00A30621 /* ALSdkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSdkSettings.h; sourceTree = "<group>"; };
+		1F0829B01C76D22B00A30621 /* ALSwiftHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSwiftHeaders.h; sourceTree = "<group>"; };
+		1F0829B11C76D22B00A30621 /* ALTargetingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTargetingData.h; sourceTree = "<group>"; };
+		1F0829B21C76D22B00A30621 /* libAppLovinTVOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppLovinTVOS.a; path = AFNetworking/libAppLovinTVOS.a; sourceTree = "<group>"; };
+		1F0829B41C76D27F00A30621 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1F0829B61C76D29300A30621 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F0829B81C76D2A900A30621 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1F0829BA1C76D2BF00A30621 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1F0829BC1C76D2D200A30621 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F0829BE1C76D2E300A30621 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F0EA6331C3705A50069BFE0 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		1F0EA6351C3705AC0069BFE0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1F0EA6371C3811AB0069BFE0 /* todd_marlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = todd_marlin.jpg; sourceTree = "<group>"; };
+		1F3D29CD1C8C855F00E35CAD /* todd_marlin_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todd_marlin_bkg.png; sourceTree = "<group>"; };
+		1F4769FA1C83CF9E000B5B33 /* logo_CaptApp_white-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_CaptApp_white-02.png"; sourceTree = "<group>"; };
 		1F63805C1C2E24D60051F986 /* CaptApp Apple TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaptApp Apple TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6380601C2E24D60051F986 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F6380621C2E24D60051F986 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +153,24 @@
 		1F63807D1C2E24D60051F986 /* CaptApp Apple TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CaptApp Apple TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6380811C2E24D70051F986 /* CaptApp_Apple_TVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptApp_Apple_TVUITests.m; sourceTree = "<group>"; };
 		1F6380831C2E24D70051F986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F63808F1C2E26020051F986 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1F6380911C2E275C0051F986 /* captapp_tv_logo-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "captapp_tv_logo-03.png"; sourceTree = "<group>"; };
+		1F64C4C91C7D6B4600712829 /* leader-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leader-01.png"; sourceTree = "<group>"; };
+		1F64C4CF1C7D790F00712829 /* captAppTopShelf.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = captAppTopShelf.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F64C4D01C7D790F00712829 /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
+		1F64C4D31C7D790F00712829 /* ServiceProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
+		1F64C4D41C7D790F00712829 /* ServiceProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
+		1F64C4D61C7D790F00712829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F64C4DE1C7F59CB00712829 /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
+		1F64C4DF1C7F59CB00712829 /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
+		1F65E56B1C75C50500878BDA /* captapp_aptv_logo_fin3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = captapp_aptv_logo_fin3.png; sourceTree = "<group>"; };
+		1F65E56D1C75C51500878BDA /* captapp_aptv_logo_fin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = captapp_aptv_logo_fin2.png; sourceTree = "<group>"; };
+		1F65E56F1C75C53000878BDA /* captapp_aptv_logo_fin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = captapp_aptv_logo_fin1.png; sourceTree = "<group>"; };
+		1FA5B0711C90AA7B00F38F51 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1FA5B0731C90AA8D00F38F51 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1FA5B0751C90AAC000F38F51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1FEBE0021CAB0FC300E3F7C1 /* ReportsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsCollectionViewCell.h; sourceTree = "<group>"; };
+		1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +178,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA5B0761C90AAC000F38F51 /* Foundation.framework in Frameworks */,
+				1F0829B91C76D2A900A30621 /* CoreMedia.framework in Frameworks */,
+				1FA5B0741C90AA8D00F38F51 /* MediaPlayer.framework in Frameworks */,
+				1FA5B0721C90AA7B00F38F51 /* MobileCoreServices.framework in Frameworks */,
+				1F0829BF1C76D2E300A30621 /* UIKit.framework in Frameworks */,
+				1F0829BD1C76D2D200A30621 /* SystemConfiguration.framework in Frameworks */,
+				1F0829BB1C76D2BF00A30621 /* StoreKit.framework in Frameworks */,
+				1F0829B71C76D29300A30621 /* CoreGraphics.framework in Frameworks */,
+				1F0829B51C76D27F00A30621 /* AdSupport.framework in Frameworks */,
+				1F0EA6361C3705AC0069BFE0 /* AVFoundation.framework in Frameworks */,
+				1F0829B31C76D22B00A30621 /* libAppLovinTVOS.a in Frameworks */,
+				1F0EA6341C3705A50069BFE0 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,16 +207,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F64C4CC1C7D790F00712829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F64C4D11C7D790F00712829 /* TVServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0829771C7635BA00A30621 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1F0829781C7635BA00A30621 /* AFHTTPSessionManager.h */,
+				1F0829791C7635BA00A30621 /* AFHTTPSessionManager.m */,
+				1F08297A1C7635BA00A30621 /* AFNetworking.h */,
+				1F08297B1C7635BA00A30621 /* AFNetworkReachabilityManager.h */,
+				1F08297C1C7635BA00A30621 /* AFNetworkReachabilityManager.m */,
+				1F08297D1C7635BA00A30621 /* AFSecurityPolicy.h */,
+				1F08297E1C7635BA00A30621 /* AFSecurityPolicy.m */,
+				1F08297F1C7635BA00A30621 /* AFURLRequestSerialization.h */,
+				1F0829801C7635BA00A30621 /* AFURLRequestSerialization.m */,
+				1F0829811C7635BA00A30621 /* AFURLResponseSerialization.h */,
+				1F0829821C7635BA00A30621 /* AFURLResponseSerialization.m */,
+				1F0829831C7635BA00A30621 /* AFURLSessionManager.h */,
+				1F0829841C7635BA00A30621 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		1F0829971C76D22B00A30621 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				1F0829981C76D22B00A30621 /* ALAd.h */,
+				1F0829991C76D22B00A30621 /* ALAdDisplayDelegate.h */,
+				1F08299A1C76D22B00A30621 /* ALAdLoadDelegate.h */,
+				1F08299B1C76D22B00A30621 /* ALAdRewardDelegate.h */,
+				1F08299C1C76D22B00A30621 /* ALAdService.h */,
+				1F08299D1C76D22B00A30621 /* ALAdSize.h */,
+				1F08299E1C76D22B00A30621 /* ALAdType.h */,
+				1F08299F1C76D22B00A30621 /* ALAdUpdateDelegate.h */,
+				1F0829A01C76D22B00A30621 /* ALAdVideoPlaybackDelegate.h */,
+				1F0829A11C76D22B00A30621 /* ALAdView.h */,
+				1F0829A21C76D22B00A30621 /* ALAnnotations.h */,
+				1F0829A31C76D22B00A30621 /* ALErrorCodes.h */,
+				1F0829A41C76D22B00A30621 /* ALEventService.h */,
+				1F0829A51C76D22B00A30621 /* ALEventTypes.h */,
+				1F0829A61C76D22B00A30621 /* ALIncentivizedInterstitialAd.h */,
+				1F0829A71C76D22B00A30621 /* ALInterstitialAd.h */,
+				1F0829A81C76D22B00A30621 /* ALNativeAd.h */,
+				1F0829A91C76D22B00A30621 /* ALNativeAdLoadDelegate.h */,
+				1F0829AA1C76D22B00A30621 /* ALNativeAdPrecacheDelegate.h */,
+				1F0829AB1C76D22B00A30621 /* ALNativeAdService.h */,
+				1F0829AC1C76D22B00A30621 /* ALPostbackDelegate.h */,
+				1F0829AD1C76D22B00A30621 /* ALPostbackService.h */,
+				1F0829AE1C76D22B00A30621 /* ALSdk.h */,
+				1F0829AF1C76D22B00A30621 /* ALSdkSettings.h */,
+				1F0829B01C76D22B00A30621 /* ALSwiftHeaders.h */,
+				1F0829B11C76D22B00A30621 /* ALTargetingData.h */,
+			);
+			name = headers;
+			path = AFNetworking/headers;
+			sourceTree = "<group>";
+		};
 		1F6380531C2E24D60051F986 = {
 			isa = PBXGroup;
 			children = (
+				1F0829971C76D22B00A30621 /* headers */,
+				1F0829B21C76D22B00A30621 /* libAppLovinTVOS.a */,
+				1F0829771C7635BA00A30621 /* AFNetworking */,
 				1F63805E1C2E24D60051F986 /* CaptApp Apple TV */,
 				1F6380751C2E24D60051F986 /* CaptApp Apple TVTests */,
 				1F6380801C2E24D70051F986 /* CaptApp Apple TVUITests */,
+				1F64C4D21C7D790F00712829 /* captAppTopShelf */,
 				1F63805D1C2E24D60051F986 /* Products */,
+				717B959C810E72E1D48F744E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +293,7 @@
 				1F63805C1C2E24D60051F986 /* CaptApp Apple TV.app */,
 				1F6380721C2E24D60051F986 /* CaptApp Apple TVTests.xctest */,
 				1F63807D1C2E24D60051F986 /* CaptApp Apple TVUITests.xctest */,
+				1F64C4CF1C7D790F00712829 /* captAppTopShelf.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,11 +301,15 @@
 		1F63805E1C2E24D60051F986 /* CaptApp Apple TV */ = {
 			isa = PBXGroup;
 			children = (
+				1F6380681C2E24D60051F986 /* Main.storyboard */,
 				1F6380621C2E24D60051F986 /* AppDelegate.h */,
 				1F6380631C2E24D60051F986 /* AppDelegate.m */,
 				1F6380651C2E24D60051F986 /* ViewController.h */,
 				1F6380661C2E24D60051F986 /* ViewController.m */,
-				1F6380681C2E24D60051F986 /* Main.storyboard */,
+				1F64C4DE1C7F59CB00712829 /* LeaderBoardViewController.h */,
+				1F64C4DF1C7F59CB00712829 /* LeaderBoardViewController.m */,
+				1FEBE0021CAB0FC300E3F7C1 /* ReportsCollectionViewCell.h */,
+				1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */,
 				1F63806B1C2E24D60051F986 /* Assets.xcassets */,
 				1F63806D1C2E24D60051F986 /* Info.plist */,
 				1F63805F1C2E24D60051F986 /* Supporting Files */,
@@ -114,6 +320,15 @@
 		1F63805F1C2E24D60051F986 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F3D29CD1C8C855F00E35CAD /* todd_marlin_bkg.png */,
+				1F4769FA1C83CF9E000B5B33 /* logo_CaptApp_white-02.png */,
+				1F64C4C91C7D6B4600712829 /* leader-01.png */,
+				1F65E56D1C75C51500878BDA /* captapp_aptv_logo_fin2.png */,
+				1F65E56F1C75C53000878BDA /* captapp_aptv_logo_fin1.png */,
+				1F65E56B1C75C50500878BDA /* captapp_aptv_logo_fin3.png */,
+				1F0EA6371C3811AB0069BFE0 /* todd_marlin.jpg */,
+				1F6380911C2E275C0051F986 /* captapp_tv_logo-03.png */,
+				1F63808F1C2E26020051F986 /* logo.png */,
 				1F6380601C2E24D60051F986 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,6 +352,35 @@
 			path = "CaptApp Apple TVUITests";
 			sourceTree = "<group>";
 		};
+		1F64C4D21C7D790F00712829 /* captAppTopShelf */ = {
+			isa = PBXGroup;
+			children = (
+				1F64C4D31C7D790F00712829 /* ServiceProvider.h */,
+				1F64C4D41C7D790F00712829 /* ServiceProvider.m */,
+				1F64C4D61C7D790F00712829 /* Info.plist */,
+			);
+			path = captAppTopShelf;
+			sourceTree = "<group>";
+		};
+		717B959C810E72E1D48F744E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5B0751C90AAC000F38F51 /* Foundation.framework */,
+				1FA5B0731C90AA8D00F38F51 /* MediaPlayer.framework */,
+				1FA5B0711C90AA7B00F38F51 /* MobileCoreServices.framework */,
+				1F0829BE1C76D2E300A30621 /* UIKit.framework */,
+				1F0829BC1C76D2D200A30621 /* SystemConfiguration.framework */,
+				1F0829BA1C76D2BF00A30621 /* StoreKit.framework */,
+				1F0829B81C76D2A900A30621 /* CoreMedia.framework */,
+				1F0829B61C76D29300A30621 /* CoreGraphics.framework */,
+				1F0829B41C76D27F00A30621 /* AdSupport.framework */,
+				1F0EA6351C3705AC0069BFE0 /* AVFoundation.framework */,
+				1F0EA6331C3705A50069BFE0 /* AVKit.framework */,
+				1F64C4D01C7D790F00712829 /* TVServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,10 +391,12 @@
 				1F6380581C2E24D60051F986 /* Sources */,
 				1F6380591C2E24D60051F986 /* Frameworks */,
 				1F63805A1C2E24D60051F986 /* Resources */,
+				1F64C4DD1C7D790F00712829 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1F64C4D81C7D790F00712829 /* PBXTargetDependency */,
 			);
 			name = "CaptApp Apple TV";
 			productName = "CaptApp Apple TV";
@@ -193,6 +439,23 @@
 			productReference = 1F63807D1C2E24D60051F986 /* CaptApp Apple TVUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1F64C4CE1C7D790F00712829 /* captAppTopShelf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F64C4DA1C7D790F00712829 /* Build configuration list for PBXNativeTarget "captAppTopShelf" */;
+			buildPhases = (
+				1F64C4CB1C7D790F00712829 /* Sources */,
+				1F64C4CC1C7D790F00712829 /* Frameworks */,
+				1F64C4CD1C7D790F00712829 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = captAppTopShelf;
+			productName = captAppTopShelf;
+			productReference = 1F64C4CF1C7D790F00712829 /* captAppTopShelf.appex */;
+			productType = "com.apple.product-type.tv-app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +467,7 @@
 				TargetAttributes = {
 					1F63805B1C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = QL98ADT7RN;
 					};
 					1F6380711C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
@@ -212,6 +476,10 @@
 					1F63807C1C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 1F63805B1C2E24D60051F986;
+					};
+					1F64C4CE1C7D790F00712829 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = QL98ADT7RN;
 					};
 				};
 			};
@@ -231,6 +499,7 @@
 				1F63805B1C2E24D60051F986 /* CaptApp Apple TV */,
 				1F6380711C2E24D60051F986 /* CaptApp Apple TVTests */,
 				1F63807C1C2E24D60051F986 /* CaptApp Apple TVUITests */,
+				1F64C4CE1C7D790F00712829 /* captAppTopShelf */,
 			);
 		};
 /* End PBXProject section */
@@ -240,8 +509,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4769FB1C83CF9E000B5B33 /* logo_CaptApp_white-02.png in Resources */,
+				1F3D29CE1C8C855F00E35CAD /* todd_marlin_bkg.png in Resources */,
 				1F63806C1C2E24D60051F986 /* Assets.xcassets in Resources */,
+				1F65E56E1C75C51500878BDA /* captapp_aptv_logo_fin2.png in Resources */,
+				1F65E56C1C75C50500878BDA /* captapp_aptv_logo_fin3.png in Resources */,
+				1F64C4CA1C7D6B4600712829 /* leader-01.png in Resources */,
 				1F63806A1C2E24D60051F986 /* Main.storyboard in Resources */,
+				1F0EA6381C3811AB0069BFE0 /* todd_marlin.jpg in Resources */,
+				1F65E5701C75C53000878BDA /* captapp_aptv_logo_fin1.png in Resources */,
+				1F6380901C2E26020051F986 /* logo.png in Resources */,
+				1F6380921C2E275C0051F986 /* captapp_tv_logo-03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +537,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F64C4CD1C7D790F00712829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,9 +551,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */,
+				1F64C4E01C7F59CB00712829 /* LeaderBoardViewController.m in Sources */,
+				1F0829871C7635BA00A30621 /* AFSecurityPolicy.m in Sources */,
 				1F6380671C2E24D60051F986 /* ViewController.m in Sources */,
+				1F0829881C7635BA00A30621 /* AFURLRequestSerialization.m in Sources */,
 				1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */,
+				1F08298A1C7635BA00A30621 /* AFURLSessionManager.m in Sources */,
 				1F6380611C2E24D60051F986 /* main.m in Sources */,
+				1F0829891C7635BA00A30621 /* AFURLResponseSerialization.m in Sources */,
+				1F0829861C7635BA00A30621 /* AFNetworkReachabilityManager.m in Sources */,
+				1F0829851C7635BA00A30621 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +581,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F64C4CB1C7D790F00712829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F64C4D51C7D790F00712829 /* ServiceProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -300,6 +601,11 @@
 			isa = PBXTargetDependency;
 			target = 1F63805B1C2E24D60051F986 /* CaptApp Apple TV */;
 			targetProxy = 1F63807E1C2E24D60051F986 /* PBXContainerItemProxy */;
+		};
+		1F64C4D81C7D790F00712829 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F64C4CE1C7D790F00712829 /* captAppTopShelf */;
+			targetProxy = 1F64C4D71C7D790F00712829 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,10 +706,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CaptApp Apple TV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AFNetworking",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -412,10 +729,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CaptApp Apple TV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AFNetworking",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Release;
 		};
@@ -467,6 +795,32 @@
 			};
 			name = Release;
 		};
+		1F64C4DB1C7D790F00712829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				INFOPLIST_FILE = captAppTopShelf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV.captAppTopShelf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1F64C4DC1C7D790F00712829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				INFOPLIST_FILE = captAppTopShelf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV.captAppTopShelf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +840,7 @@
 				1F6380881C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F6380891C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +849,7 @@
 				1F63808B1C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F63808C1C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +858,16 @@
 				1F63808E1C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F64C4DA1C7D790F00712829 /* Build configuration list for PBXNativeTarget "captAppTopShelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F64C4DB1C7D790F00712829 /* Debug */,
+				1F64C4DC1C7D790F00712829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
