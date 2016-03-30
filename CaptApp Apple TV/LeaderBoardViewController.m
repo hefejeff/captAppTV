@@ -167,6 +167,13 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         self.playerViewController.player = reportQueuePlayer;
         [reportQueuePlayer addObserver:self forKeyPath:@"currentItem" options:NSKeyValueObservingOptionOld context:AVLoopPlayerCurrentItemObservationContext];
     }
+    else
+    {
+        AVPlayerItem *lastItem = [reportArray lastObject];
+        AVPlayerItem *lastItemInPlayer = [reportQueuePlayer.items lastObject];
+        [reportQueuePlayer insertItem:lastItem afterItem: lastItemInPlayer];
+        //reportQueuePlayer inser
+    }
     
     [reportQueuePlayer play];
     
@@ -192,7 +199,11 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         if ([itemRemoved isKindOfClass:[AVPlayerItem class]])
         {
             [itemRemoved seekToTime:kCMTimeZero];
-            [player insertItem:itemRemoved afterItem:nil];
+            NSLog(@"Adding AVPlayerItem to the loop");
+            
+            AVPlayerItem *lastItemInPlayer = [player.items lastObject];
+            
+            [player insertItem:itemRemoved afterItem: lastItemInPlayer];
         }
     }
 }
