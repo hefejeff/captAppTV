@@ -122,34 +122,38 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         self.clips = [responseObject allObjects];
         NSLog(@"Clips Array: %@",clips);
         
-        AVMutableComposition *reportClipsComposition = [AVMutableComposition composition];
-        CMTime current = kCMTimeZero;
-        NSError *compositionError = nil;
-        for(NSArray *clip in clips) {
-            
-            NSURL *fileUrl = [NSURL URLWithString:[clip valueForKeyPath:@"file"]];
-            NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
-            AVURLAsset *myAsset = [AVURLAsset URLAssetWithURL:fileUrl options:optionsDictionary];
-            
-            NSLog(@"MyAsset: %@",myAsset);
-            
-            BOOL result = [reportClipsComposition insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
-                                                          ofAsset:myAsset
-                                                           atTime:current
-                                                            error:&compositionError];
-            if(!result) {
-                if(compositionError) {
-                    // manage the composition error case
+        if (clips.count > 0)
+        {
+            AVMutableComposition *reportClipsComposition = [AVMutableComposition composition];
+            CMTime current = kCMTimeZero;
+            NSError *compositionError = nil;
+            for(NSArray *clip in clips) {
+                
+                NSURL *fileUrl = [NSURL URLWithString:[clip valueForKeyPath:@"file"]];
+                NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+                AVURLAsset *myAsset = [AVURLAsset URLAssetWithURL:fileUrl options:optionsDictionary];
+                
+                NSLog(@"MyAsset: %@",myAsset);
+                
+                BOOL result = [reportClipsComposition insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
+                                                              ofAsset:myAsset
+                                                               atTime:current
+                                                                error:&compositionError];
+                if(!result) {
+                    if(compositionError) {
+                        // manage the composition error case
+                    }
+                } else {
+                    current = CMTimeAdd(current, [myAsset duration]);
+                    
                 }
-            } else {
-                current = CMTimeAdd(current, [myAsset duration]);
                 
             }
-            
+            AVPlayerItem *compositionPlayerItem = [AVPlayerItem playerItemWithAsset:reportClipsComposition];
+            [reportArray addObject:compositionPlayerItem];
+            [self playVideos:nil];
         }
-        AVPlayerItem *compositionPlayerItem = [AVPlayerItem playerItemWithAsset:reportClipsComposition];
-        [reportArray addObject:compositionPlayerItem];
-       [self playVideos:nil];
+        
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -161,21 +165,25 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
 
 - (void) playVideos:(id)sender
 {
-    if (reportQueuePlayer == nil) {
+    if (reportQueuePlayer == nil)
+    {
         reportQueuePlayer = [[AVQueuePlayer alloc] initWithItems:reportArray];
         NSLog(@"reportQueue: %@", reportQueuePlayer);
         self.playerViewController.player = reportQueuePlayer;
         [reportQueuePlayer addObserver:self forKeyPath:@"currentItem" options:NSKeyValueObservingOptionOld context:AVLoopPlayerCurrentItemObservationContext];
+        
+        [reportQueuePlayer play];
     }
     else
     {
         AVPlayerItem *lastItem = [reportArray lastObject];
-        AVPlayerItem *lastItemInPlayer = [reportQueuePlayer.items lastObject];
-        [reportQueuePlayer insertItem:lastItem afterItem: lastItemInPlayer];
-        //reportQueuePlayer inser
+        //AVPlayerItem *lastItemInPlayer = [reportQueuePlayer.items lastObject];
+        [reportQueuePlayer insertItem:lastItem afterItem: nil];
+        NSLog(@"Adding next report");
+
     }
     
-    [reportQueuePlayer play];
+    
     
     if (!self.isPlayerPresented) {
         self.isPlayerPresented = YES;
@@ -191,6 +199,8 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
     {
         AVQueuePlayer *player = (AVQueuePlayer *)object;
         
+        NSLog(@"AVPlayerItem finished to play");
+        
         // Append the previous current item to the player's queue
         AVPlayerItem *itemRemoved = changeDictionary[NSKeyValueChangeOldKey];
         
@@ -201,9 +211,9 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
             [itemRemoved seekToTime:kCMTimeZero];
             NSLog(@"Adding AVPlayerItem to the loop");
             
-            AVPlayerItem *lastItemInPlayer = [player.items lastObject];
+            //AVPlayerItem *lastItemInPlayer = [player.items lastObject];
             
-            [player insertItem:itemRemoved afterItem: lastItemInPlayer];
+            [player insertItem:itemRemoved afterItem: nil];
         }
     }
 }
