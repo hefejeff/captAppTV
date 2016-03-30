@@ -8,10 +8,12 @@
 
 #import "LeaderBoardViewController.h"
 
-
+static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPlayerCurrentItemObservationContext;
 
 @interface LeaderBoardViewController ()
 
+@property (nonatomic, strong) AVPlayerViewController *playerViewController;
+@property BOOL isPlayerPresented;
 @end
 
 @implementation LeaderBoardViewController
@@ -36,6 +38,8 @@
     NSLog(@"Port Array %@", currentPort);
     NSLog(@"Port Name %@", portName);
     
+    self.isPlayerPresented = NO;
+    
     [super viewWillAppear:animated];
     
 }
@@ -43,6 +47,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.playerViewController = [AVPlayerViewController new];
     [self downloadVideos:nil];
     
     
@@ -155,25 +161,39 @@
 
 - (void) playVideos:(id)sender
 {
-    reportQueuePlayer = [AVQueuePlayer queuePlayerWithItems:reportArray];
-    NSLog(@"reportQueue: %@", reportQueuePlayer);
+    if (reportQueuePlayer == nil) {
+        reportQueuePlayer = [[AVQueuePlayer alloc] initWithItems:reportArray];
+        NSLog(@"reportQueue: %@", reportQueuePlayer);
+        self.playerViewController.player = reportQueuePlayer;
+        [reportQueuePlayer addObserver:self forKeyPath:@"currentItem" options:NSKeyValueObservingOptionOld context:AVLoopPlayerCurrentItemObservationContext];
+    }
     
-    AVPlayerViewController *playerViewController = [AVPlayerViewController new];
-    playerViewController.player = reportQueuePlayer;
     [reportQueuePlayer play];
     
-     [self presentViewController:playerViewController animated:YES completion:nil];
+    if (!self.isPlayerPresented) {
+        self.isPlayerPresented = YES;
+        [self presentViewController:self.playerViewController animated:YES completion:nil];
+    }
+    
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)changeDictionary context:(void *)context
+{
+    if (context == AVLoopPlayerCurrentItemObservationContext)
+    {
+        AVQueuePlayer *player = (AVQueuePlayer *)object;
+        
+        // Append the previous current item to the player's queue
+        AVPlayerItem *itemRemoved = changeDictionary[NSKeyValueChangeOldKey];
+        
+        // An initial change from a nil currentItem yields NSNull here.
+        // Check to make sure the class is AVPlayerItem before appending it to the end of the queue
+        if ([itemRemoved isKindOfClass:[AVPlayerItem class]])
+        {
+            [itemRemoved seekToTime:kCMTimeZero];
+            [player insertItem:itemRemoved afterItem:nil];
+        }
+    }
 }
-*/
-
 @end

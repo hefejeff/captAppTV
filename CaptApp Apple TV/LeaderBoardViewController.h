@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <CoreMedia/CoreMedia.h>
 
 
 @interface LeaderBoardViewController : UIViewController
