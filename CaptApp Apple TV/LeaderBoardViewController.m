@@ -122,6 +122,7 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         self.clips = [responseObject allObjects];
         NSLog(@"Clips Array: %@",clips);
         
+        // Do not add a empty clip
         if (clips.count > 0)
         {
             AVMutableComposition *reportClipsComposition = [AVMutableComposition composition];
@@ -165,34 +166,46 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
 
 - (void) playVideos:(id)sender
 {
+    // Validate the Queue was instance
     if (reportQueuePlayer == nil)
     {
         reportQueuePlayer = [[AVQueuePlayer alloc] initWithItems:reportArray];
         NSLog(@"reportQueue: %@", reportQueuePlayer);
         self.playerViewController.player = reportQueuePlayer;
+        
+        //adding an observer to the Queue when finish a track
         [reportQueuePlayer addObserver:self forKeyPath:@"currentItem" options:NSKeyValueObservingOptionOld context:AVLoopPlayerCurrentItemObservationContext];
         
         [reportQueuePlayer play];
     }
     else
     {
+        // Add the Next report to the Queue
         AVPlayerItem *lastItem = [reportArray lastObject];
-        //AVPlayerItem *lastItemInPlayer = [reportQueuePlayer.items lastObject];
         [reportQueuePlayer insertItem:lastItem afterItem: nil];
         NSLog(@"Adding next report");
 
     }
     
     
-    
+    // Validate if the Player was Displayed.
     if (!self.isPlayerPresented) {
         self.isPlayerPresented = YES;
+        
+        //Adding the logo to the player
+        UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waterMarkLogo"]];
+        logo.frame = CGRectMake(50, 50, 252, 160);
+        [self.playerViewController.view addSubview:logo];
         [self presentViewController:self.playerViewController animated:YES completion:nil];
     }
     
 
 }
 
+
+/*
+    Observer for create a Loop
+ */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)changeDictionary context:(void *)context
 {
     if (context == AVLoopPlayerCurrentItemObservationContext)
