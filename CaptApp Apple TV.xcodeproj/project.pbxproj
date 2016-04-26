@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0829851C7635BA00A30621 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829791C7635BA00A30621 /* AFHTTPSessionManager.m */; };
-		1F0829861C7635BA00A30621 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F08297C1C7635BA00A30621 /* AFNetworkReachabilityManager.m */; };
-		1F0829871C7635BA00A30621 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F08297E1C7635BA00A30621 /* AFSecurityPolicy.m */; };
-		1F0829881C7635BA00A30621 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829801C7635BA00A30621 /* AFURLRequestSerialization.m */; };
-		1F0829891C7635BA00A30621 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829821C7635BA00A30621 /* AFURLResponseSerialization.m */; };
-		1F08298A1C7635BA00A30621 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0829841C7635BA00A30621 /* AFURLSessionManager.m */; };
 		1F0829B31C76D22B00A30621 /* libAppLovinTVOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B21C76D22B00A30621 /* libAppLovinTVOS.a */; };
 		1F0829B51C76D27F00A30621 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B41C76D27F00A30621 /* AdSupport.framework */; };
 		1F0829B71C76D29300A30621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0829B61C76D29300A30621 /* CoreGraphics.framework */; };
@@ -46,6 +40,7 @@
 		1FA5B0741C90AA8D00F38F51 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0731C90AA8D00F38F51 /* MediaPlayer.framework */; };
 		1FA5B0761C90AAC000F38F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0751C90AAC000F38F51 /* Foundation.framework */; };
 		1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */; };
+		6CAD1DCC069DF3C8A90219D1 /* libPods-CaptApp Apple TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC835156F9DBA21502C0150 /* libPods-CaptApp Apple TV.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,19 +82,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F0829781C7635BA00A30621 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		1F0829791C7635BA00A30621 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		1F08297A1C7635BA00A30621 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		1F08297B1C7635BA00A30621 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		1F08297C1C7635BA00A30621 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		1F08297D1C7635BA00A30621 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		1F08297E1C7635BA00A30621 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		1F08297F1C7635BA00A30621 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		1F0829801C7635BA00A30621 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		1F0829811C7635BA00A30621 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		1F0829821C7635BA00A30621 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		1F0829831C7635BA00A30621 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		1F0829841C7635BA00A30621 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		1F0829981C76D22B00A30621 /* ALAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAd.h; sourceTree = "<group>"; };
 		1F0829991C76D22B00A30621 /* ALAdDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdDisplayDelegate.h; sourceTree = "<group>"; };
 		1F08299A1C76D22B00A30621 /* ALAdLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdLoadDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +153,9 @@
 		1FA5B0751C90AAC000F38F51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FEBE0021CAB0FC300E3F7C1 /* ReportsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsCollectionViewCell.h; sourceTree = "<group>"; };
 		1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsCollectionViewCell.m; sourceTree = "<group>"; };
+		417EB96A11B5203FF5F09FEF /* Pods-CaptApp Apple TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptApp Apple TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV.release.xcconfig"; sourceTree = "<group>"; };
+		73218D3516B947D4E367C246 /* Pods-CaptApp Apple TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptApp Apple TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV.debug.xcconfig"; sourceTree = "<group>"; };
+		EFC835156F9DBA21502C0150 /* libPods-CaptApp Apple TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CaptApp Apple TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +175,7 @@
 				1F0EA6361C3705AC0069BFE0 /* AVFoundation.framework in Frameworks */,
 				1F0829B31C76D22B00A30621 /* libAppLovinTVOS.a in Frameworks */,
 				1F0EA6341C3705A50069BFE0 /* AVKit.framework in Frameworks */,
+				6CAD1DCC069DF3C8A90219D1 /* libPods-CaptApp Apple TV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,26 +204,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F0829771C7635BA00A30621 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				1F0829781C7635BA00A30621 /* AFHTTPSessionManager.h */,
-				1F0829791C7635BA00A30621 /* AFHTTPSessionManager.m */,
-				1F08297A1C7635BA00A30621 /* AFNetworking.h */,
-				1F08297B1C7635BA00A30621 /* AFNetworkReachabilityManager.h */,
-				1F08297C1C7635BA00A30621 /* AFNetworkReachabilityManager.m */,
-				1F08297D1C7635BA00A30621 /* AFSecurityPolicy.h */,
-				1F08297E1C7635BA00A30621 /* AFSecurityPolicy.m */,
-				1F08297F1C7635BA00A30621 /* AFURLRequestSerialization.h */,
-				1F0829801C7635BA00A30621 /* AFURLRequestSerialization.m */,
-				1F0829811C7635BA00A30621 /* AFURLResponseSerialization.h */,
-				1F0829821C7635BA00A30621 /* AFURLResponseSerialization.m */,
-				1F0829831C7635BA00A30621 /* AFURLSessionManager.h */,
-				1F0829841C7635BA00A30621 /* AFURLSessionManager.m */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
 		1F0829971C76D22B00A30621 /* headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,13 +243,13 @@
 			children = (
 				1F0829971C76D22B00A30621 /* headers */,
 				1F0829B21C76D22B00A30621 /* libAppLovinTVOS.a */,
-				1F0829771C7635BA00A30621 /* AFNetworking */,
 				1F63805E1C2E24D60051F986 /* CaptApp Apple TV */,
 				1F6380751C2E24D60051F986 /* CaptApp Apple TVTests */,
 				1F6380801C2E24D70051F986 /* CaptApp Apple TVUITests */,
 				1F64C4D21C7D790F00712829 /* captAppTopShelf */,
 				1F63805D1C2E24D60051F986 /* Products */,
 				717B959C810E72E1D48F744E /* Frameworks */,
+				DA21E11E4AD1B5DFA371266F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -377,8 +343,18 @@
 				1F0EA6351C3705AC0069BFE0 /* AVFoundation.framework */,
 				1F0EA6331C3705A50069BFE0 /* AVKit.framework */,
 				1F64C4D01C7D790F00712829 /* TVServices.framework */,
+				EFC835156F9DBA21502C0150 /* libPods-CaptApp Apple TV.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA21E11E4AD1B5DFA371266F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73218D3516B947D4E367C246 /* Pods-CaptApp Apple TV.debug.xcconfig */,
+				417EB96A11B5203FF5F09FEF /* Pods-CaptApp Apple TV.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,10 +364,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F6380861C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TV" */;
 			buildPhases = (
+				8BE2466C37616C355136F013 /* Check Pods Manifest.lock */,
 				1F6380581C2E24D60051F986 /* Sources */,
 				1F6380591C2E24D60051F986 /* Frameworks */,
 				1F63805A1C2E24D60051F986 /* Resources */,
 				1F64C4DD1C7D790F00712829 /* Embed App Extensions */,
+				42807F57A095C08C575C0169 /* Embed Pods Frameworks */,
+				F25C3F1B98D878E6B8BCB8A8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -467,7 +446,6 @@
 				TargetAttributes = {
 					1F63805B1C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = QL98ADT7RN;
 					};
 					1F6380711C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
@@ -546,6 +524,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42807F57A095C08C575C0169 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE2466C37616C355136F013 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F25C3F1B98D878E6B8BCB8A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F6380581C2E24D60051F986 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -553,15 +579,9 @@
 			files = (
 				1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */,
 				1F64C4E01C7F59CB00712829 /* LeaderBoardViewController.m in Sources */,
-				1F0829871C7635BA00A30621 /* AFSecurityPolicy.m in Sources */,
 				1F6380671C2E24D60051F986 /* ViewController.m in Sources */,
-				1F0829881C7635BA00A30621 /* AFURLRequestSerialization.m in Sources */,
 				1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */,
-				1F08298A1C7635BA00A30621 /* AFURLSessionManager.m in Sources */,
 				1F6380611C2E24D60051F986 /* main.m in Sources */,
-				1F0829891C7635BA00A30621 /* AFURLResponseSerialization.m in Sources */,
-				1F0829861C7635BA00A30621 /* AFNetworkReachabilityManager.m in Sources */,
-				1F0829851C7635BA00A30621 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +723,7 @@
 		};
 		1F6380871C2E24D70051F986 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73218D3516B947D4E367C246 /* Pods-CaptApp Apple TV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -714,11 +735,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AFNetworking",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = appletvos9.1;
+				SDKROOT = appletvos;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "armv7s armv7 arm64";
 			};
@@ -726,6 +750,7 @@
 		};
 		1F6380881C2E24D70051F986 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417EB96A11B5203FF5F09FEF /* Pods-CaptApp Apple TV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -737,11 +762,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AFNetworking",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = appletvos9.1;
+				SDKROOT = appletvos;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "armv7s armv7 arm64";
 			};
