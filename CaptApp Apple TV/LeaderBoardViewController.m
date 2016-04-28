@@ -148,8 +148,15 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
             // Do not add a empty clip
             if (clips.count > 0)
             {
-                AVMutableComposition *reportClipsComposition = [AVMutableComposition composition];
+                
                 __block CMTime current = kCMTimeZero;
+                
+                AVMutableComposition *composition = [AVMutableComposition composition];
+                
+                AVMutableCompositionTrack *videoTrack = [composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+                AVMutableCompositionTrack *audioTrack = [composition addMutableTrackWithMediaType:AVMediaTypeAudio
+                                                                                    preferredTrackID:kCMPersistentTrackID_Invalid];
+                
                 __block NSError *compositionError = nil;
                 __block long clipsCounter = [clips count];
                 __block BOOL trackReady = NO;
@@ -169,6 +176,46 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
                     [myAsset loadValuesAsynchronouslyForKeys:assetKeysToLoadAndTest completionHandler:
                      ^{
                          dispatch_async( dispatch_get_main_queue(),^{
+                             
+                             if ([[myAsset tracksWithMediaType:AVMediaTypeVideo] count] > 0 && [[myAsset tracksWithMediaType:AVMediaTypeAudio] count] > 0)
+                             {
+                                 AVAssetTrack *tempAssetVideo = [[myAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+                                 AVAssetTrack *tempAssetAudio = [[myAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0];
+                                 
+                                 BOOL result =  [videoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
+                                                                       ofTrack:tempAssetVideo
+                                                                        atTime:current
+                                                                         error:&compositionError];
+                                 
+                                  result = [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
+                                                        ofTrack:tempAssetAudio
+                                                         atTime:current
+                                                          error:&compositionError];
+                                 
+                                 if(!result) {
+                                     if(compositionError) {
+                                         // manage the composition error case
+                                     }
+                                 } else {
+                                     current = CMTimeAdd(current, [myAsset duration]);
+                                 }
+                                 
+                                 
+                                 clipsCounter --;
+                                 
+                                 if (clipsCounter == 0 && !trackReady)
+                                 {
+                                     trackReady = YES;
+                                     AVPlayerItem *compositionPlayerItem = [AVPlayerItem playerItemWithAsset:composition];
+                                     
+                                     [reportArray addObject:compositionPlayerItem];
+                                     [self playVideos:nil];
+                                     if ([filteredvids count] > 0)
+                                         [self playLoop:nil];
+                                     
+                                 }
+                             }
+                             
                              
                              /*
                               MERGE THE CLIPS INTO ONE TRACK COMMENTED CODE
@@ -195,13 +242,7 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
                              }
                               */
                              
-                             trackReady = YES;
-                             AVPlayerItem *compositionPlayerItem = [AVPlayerItem playerItemWithAsset:myAsset];
                              
-                             [reportArray addObject:compositionPlayerItem];
-                             [self playVideos:nil];
-                             if ([filteredvids count] > 0)
-                                 [self playLoop:nil];
                              
                          });
                      }];
