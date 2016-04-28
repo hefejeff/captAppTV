@@ -19,7 +19,7 @@
 @property (nonatomic, strong) AVQueuePlayer *reportQueuePlayer;
 @property (nonatomic, strong) NSArray *vids;
 @property (nonatomic, strong) NSArray *clips;
-@property (nonatomic, strong) NSArray *filteredvids;
+@property (nonatomic, strong) NSMutableArray *filteredvids;
 @property (nonatomic, strong) NSString *logoURL;
 @property (nonatomic, strong) NSString *portName;
 @property (weak, nonatomic) IBOutlet UIImageView *marinaLogoImage;

@@ -40,6 +40,7 @@
 		1FA5B0741C90AA8D00F38F51 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0731C90AA8D00F38F51 /* MediaPlayer.framework */; };
 		1FA5B0761C90AAC000F38F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0751C90AAC000F38F51 /* Foundation.framework */; };
 		1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */; };
+		3FFBAC181CD19AD600504C75 /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBAC171CD19AD600504C75 /* NSMutableArray+QueueAdditions.m */; };
 		6CAD1DCC069DF3C8A90219D1 /* libPods-CaptApp Apple TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC835156F9DBA21502C0150 /* libPods-CaptApp Apple TV.a */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,8 @@
 		1FA5B0751C90AAC000F38F51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FEBE0021CAB0FC300E3F7C1 /* ReportsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsCollectionViewCell.h; sourceTree = "<group>"; };
 		1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsCollectionViewCell.m; sourceTree = "<group>"; };
+		3FFBAC161CD19AD600504C75 /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
+		3FFBAC171CD19AD600504C75 /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
 		417EB96A11B5203FF5F09FEF /* Pods-CaptApp Apple TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptApp Apple TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV.release.xcconfig"; sourceTree = "<group>"; };
 		73218D3516B947D4E367C246 /* Pods-CaptApp Apple TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptApp Apple TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV.debug.xcconfig"; sourceTree = "<group>"; };
 		EFC835156F9DBA21502C0150 /* libPods-CaptApp Apple TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CaptApp Apple TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +270,7 @@
 		1F63805E1C2E24D60051F986 /* CaptApp Apple TV */ = {
 			isa = PBXGroup;
 			children = (
+				3FFBAC151CD19ABC00504C75 /* Categories */,
 				1F6380681C2E24D60051F986 /* Main.storyboard */,
 				1F6380621C2E24D60051F986 /* AppDelegate.h */,
 				1F6380631C2E24D60051F986 /* AppDelegate.m */,
@@ -326,6 +330,15 @@
 				1F64C4D61C7D790F00712829 /* Info.plist */,
 			);
 			path = captAppTopShelf;
+			sourceTree = "<group>";
+		};
+		3FFBAC151CD19ABC00504C75 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3FFBAC161CD19AD600504C75 /* NSMutableArray+QueueAdditions.h */,
+				3FFBAC171CD19AD600504C75 /* NSMutableArray+QueueAdditions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		717B959C810E72E1D48F744E /* Frameworks */ = {
@@ -446,6 +459,7 @@
 				TargetAttributes = {
 					1F63805B1C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = QL98ADT7RN;
 					};
 					1F6380711C2E24D60051F986 = {
 						CreatedOnToolsVersion = 7.2;
@@ -578,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */,
+				3FFBAC181CD19AD600504C75 /* NSMutableArray+QueueAdditions.m in Sources */,
 				1F64C4E01C7F59CB00712829 /* LeaderBoardViewController.m in Sources */,
 				1F6380671C2E24D60051F986 /* ViewController.m in Sources */,
 				1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */,
@@ -658,6 +673,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeffrey Wells (P8APW69S8H)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -678,6 +694,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c0ce4afa-7407-49bd-bd8e-4448aa1699ff";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
@@ -701,6 +718,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeffrey Wells (P8APW69S8H)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -714,6 +732,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c0ce4afa-7407-49bd-bd8e-4448aa1699ff";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
@@ -727,8 +746,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				INFOPLIST_FILE = "CaptApp Apple TV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -741,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c0ce4afa-7407-49bd-bd8e-4448aa1699ff";
 				SDKROOT = appletvos;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "armv7s armv7 arm64";
@@ -754,8 +773,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				INFOPLIST_FILE = "CaptApp Apple TV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -768,7 +787,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c0ce4afa-7407-49bd-bd8e-4448aa1699ff";
 				SDKROOT = appletvos;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "armv7s armv7 arm64";
@@ -827,11 +846,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer: Jeffrey Wells (P8APW69S8H)";
 				INFOPLIST_FILE = captAppTopShelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV.captAppTopShelf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c0ce4afa-7407-49bd-bd8e-4448aa1699ff";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -840,11 +860,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer: Jeffrey Wells (P8APW69S8H)";
 				INFOPLIST_FILE = captAppTopShelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.captapp.tv.CaptApp-Apple-TV.captAppTopShelf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c0ce4afa-7407-49bd-bd8e-4448aa1699ff";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -859,7 +880,7 @@
 				1F6380851C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F6380861C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TV" */ = {
 			isa = XCConfigurationList;
@@ -868,7 +889,7 @@
 				1F6380881C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F6380891C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVTests" */ = {
 			isa = XCConfigurationList;
@@ -877,7 +898,7 @@
 				1F63808B1C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F63808C1C2E24D70051F986 /* Build configuration list for PBXNativeTarget "CaptApp Apple TVUITests" */ = {
 			isa = XCConfigurationList;
@@ -886,7 +907,7 @@
 				1F63808E1C2E24D70051F986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F64C4DA1C7D790F00712829 /* Build configuration list for PBXNativeTarget "captAppTopShelf" */ = {
 			isa = XCConfigurationList;
@@ -895,7 +916,7 @@
 				1F64C4DC1C7D790F00712829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
