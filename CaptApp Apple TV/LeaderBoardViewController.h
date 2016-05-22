@@ -9,9 +9,13 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
+#import "AVExportCommand.h"
 
 
-@interface LeaderBoardViewController : UIViewController
+@interface LeaderBoardViewController : UIViewController <AVExportCommandDelegate>
+{
+    AVExportCommand *exportCommand;
+}
 @property (nonatomic, strong) NSString *currentPort;
 @property (strong, nonatomic) NSDictionary *Reports;
 @property (strong, nonatomic) NSDictionary *PlayList;

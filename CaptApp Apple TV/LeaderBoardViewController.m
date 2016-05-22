@@ -15,6 +15,9 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
 
 @property (nonatomic, strong) AVPlayerViewController *playerViewController;
 @property BOOL isPlayerPresented;
+@property BOOL isVideoComposition;
+@property BOOL boolExportVideo;
+
 @end
 
 @implementation LeaderBoardViewController
@@ -34,14 +37,22 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     NSLog(@"viewWillAppear");
     
     NSLog(@"Port Array %@", currentPort);
     NSLog(@"Port Name %@", portName);
     
     self.isPlayerPresented = NO;
+    self.isVideoComposition = YES;
+    self.boolExportVideo = YES;
+ 
     
-    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
     
 }
 
@@ -105,7 +116,7 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         
         //filteredvids  = [vids filteredArrayUsingPredicate:predicate];
         
-        [self playLoop:nil];
+        [self playLoopWithComposition:self.isVideoComposition];
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -113,7 +124,7 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
     
 }
 
-- (void) playLoop:(id)sender {
+- (void) playLoopWithComposition:(BOOL) isComposition {
     
     // [activityView stopAnimating];
     if (reportArray == nil) {
@@ -155,7 +166,7 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
                 
                 AVMutableCompositionTrack *videoTrack = [composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
                 AVMutableCompositionTrack *audioTrack = [composition addMutableTrackWithMediaType:AVMediaTypeAudio
-                                                                                    preferredTrackID:kCMPersistentTrackID_Invalid];
+                                                                                 preferredTrackID:kCMPersistentTrackID_Invalid];
                 
                 __block NSError *compositionError = nil;
                 __block long clipsCounter = [clips count];
@@ -164,94 +175,75 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
                 for(NSArray *clip in clips) {
                     
                     NSURL *fileUrl = [NSURL URLWithString:[clip valueForKeyPath:@"file"]];
-                    //NSURL *fileUrl = [NSURL URLWithString:@"http://cdn-fms.rbs.com.br/vod/hls_sample1_manifest.m3u8"];
+                    
                     NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
                     
                     AVURLAsset *myAsset = [[AVURLAsset alloc] initWithURL:fileUrl options:optionsDictionary];
- 
-                    // Load the values of AVAsset keys to inspect subsequently
-                    NSArray *assetKeysToLoadAndTest = @[@"playable", @"composable", @"tracks", @"duration"];
                     
-                    // Tells the asset to load the values of any of the specified keys that are not already loaded.
-                    [myAsset loadValuesAsynchronouslyForKeys:assetKeysToLoadAndTest completionHandler:
-                     ^{
-                         dispatch_async( dispatch_get_main_queue(),^{
-                             
-                             if ([[myAsset tracksWithMediaType:AVMediaTypeVideo] count] > 0 && [[myAsset tracksWithMediaType:AVMediaTypeAudio] count] > 0)
-                             {
-                                 AVAssetTrack *tempAssetVideo = [[myAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
-                                 AVAssetTrack *tempAssetAudio = [[myAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0];
-                                 
-                                 BOOL result =  [videoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
-                                                                       ofTrack:tempAssetVideo
-                                                                        atTime:current
-                                                                         error:&compositionError];
-                                 
-                                  result = [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
-                                                        ofTrack:tempAssetAudio
-                                                         atTime:current
-                                                          error:&compositionError];
-                                 
-                                 if(!result) {
-                                     if(compositionError) {
-                                         // manage the composition error case
-                                     }
-                                 } else {
-                                     current = CMTimeAdd(current, [myAsset duration]);
-                                 }
-                                 
-                                 
-                                 clipsCounter --;
-                                 
-                                 if (clipsCounter == 0 && !trackReady)
-                                 {
-                                     trackReady = YES;
-                                     AVPlayerItem *compositionPlayerItem = [AVPlayerItem playerItemWithAsset:composition];
-                                     
-                                     [reportArray addObject:compositionPlayerItem];
-                                     [self playVideos:nil];
-                                     if ([filteredvids count] > 0)
-                                         [self playLoop:nil];
-                                     
-                                 }
-                             }
-                             
-                             
-                             /*
-                              MERGE THE CLIPS INTO ONE TRACK COMMENTED CODE
-                              
-                             BOOL result = [reportClipsComposition insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
-                                                                           ofAsset:myAsset
-                                                                            atTime:current
-                                                                             error:&compositionError];
-                             if(!result) {
-                                 if(compositionError) {
-                                     // manage the composition error case
-                                 }
-                             } else {
-                                 current = CMTimeAdd(current, [myAsset duration]);
-                                 
-                             }
-                             // Other code here for AVPlayer
-                             clipsCounter --;
-                             
-                             if (clipsCounter == 0 && !trackReady)
-                             {
-                                 
-                                 
-                             }
-                              */
-                             
-                             
-                             
-                         });
-                     }];
-
-                    
-
                     
                     NSLog(@"MyAsset: %@",myAsset);
                     
+                    if (!isComposition)
+                    {
+                        
+                        // Load the values of AVAsset keys to inspect subsequently
+                        NSArray *assetKeysToLoadAndTest = @[@"playable", @"composable", @"tracks", @"duration"];
+                        
+                        // Tells the asset to load the values of any of the specified keys that are not already loaded.
+                        [myAsset loadValuesAsynchronouslyForKeys:assetKeysToLoadAndTest completionHandler:^{
+                            dispatch_async( dispatch_get_main_queue(),^{
+                                AVPlayerItem *compositionPlayerItem = [AVPlayerItem playerItemWithAsset:myAsset];
+                                
+                                [reportArray addObject:compositionPlayerItem];
+                                [self playVideos:nil];
+                                
+                                if ([filteredvids count] > 0)
+                                    [self playLoopWithComposition:isComposition];
+                                
+                            });
+                        }];
+                        
+                        
+                    }
+                    else
+                    {
+                        if ([[myAsset tracksWithMediaType:AVMediaTypeVideo] count] > 0 && [[myAsset tracksWithMediaType:AVMediaTypeAudio] count] > 0)
+                        {
+                            AVAssetTrack *tempAssetVideo = [[myAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+                            AVAssetTrack *tempAssetAudio = [[myAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0];
+                            
+                            BOOL result =  [videoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
+                                                               ofTrack:tempAssetVideo
+                                                                atTime:current
+                                                                 error:&compositionError];
+                            
+                            result = [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, [myAsset duration])
+                                                         ofTrack:tempAssetAudio
+                                                          atTime:current
+                                                           error:&compositionError];
+                            
+                            if(!result) {
+                                if(compositionError) {
+                                    // manage the composition error case
+                                }
+                            } else {
+                                current = CMTimeAdd(current, [myAsset duration]);
+                            }
+                            
+                            
+                            clipsCounter --;
+                            
+                            if (clipsCounter == 0 && !trackReady)
+                            {
+                                
+                                trackReady = YES;
+                                
+                                [self exportingVideo:self.boolExportVideo withComposition: composition];
+                                
+                            }
+                        }
+                        
+                    }
                 }
                 
                 
@@ -259,7 +251,7 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
             else
             {
                 if ([filteredvids count] > 0)
-                    [self playLoop:nil];
+                    [self playLoopWithComposition:isComposition];
             }
             
             
@@ -268,8 +260,55 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         }];
         
     }
-
     
+    
+}
+
+- (void)exportingVideo:(BOOL)export withComposition: (AVMutableComposition *)mutableComposition
+{
+
+    if (export)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            exportCommand = [[AVExportCommand alloc] initWithComposition:mutableComposition
+                                                        videoComposition:nil
+                                                                audioMix:nil];
+            exportCommand.delegate = self;
+            
+            [exportCommand performWithAsset:nil];
+        });
+        
+    }
+    else
+    {
+        AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:mutableComposition];
+        [reportArray addObject:playerItem];
+        [self playVideos:nil];
+        
+        if ([filteredvids count] > 0)
+        {
+            [self playLoopWithComposition:self.isVideoComposition];
+        }
+        
+    }
+
+ 
+    
+}
+
+- (void) exportedAsset:(AVAsset *)asset
+{
+    if (asset != nil) {
+        AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
+        [reportArray addObject:playerItem];
+        [self playVideos:nil];
+    }
+    
+    if ([filteredvids count] > 0)
+    {
+        [self playLoopWithComposition:self.isVideoComposition];
+    }
 }
 
 

@@ -40,6 +40,8 @@
 		1FA5B0741C90AA8D00F38F51 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0731C90AA8D00F38F51 /* MediaPlayer.framework */; };
 		1FA5B0761C90AAC000F38F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5B0751C90AAC000F38F51 /* Foundation.framework */; };
 		1FEBE0041CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */; };
+		3F6DD95D1CF114CE0030749E /* AVCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DD95C1CF114CE0030749E /* AVCommand.m */; };
+		3F6DD9601CF116750030749E /* AVExportCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DD95F1CF116750030749E /* AVExportCommand.m */; };
 		3FFBAC181CD19AD600504C75 /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBAC171CD19AD600504C75 /* NSMutableArray+QueueAdditions.m */; };
 		6CAD1DCC069DF3C8A90219D1 /* libPods-CaptApp Apple TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC835156F9DBA21502C0150 /* libPods-CaptApp Apple TV.a */; };
 /* End PBXBuildFile section */
@@ -154,6 +156,10 @@
 		1FA5B0751C90AAC000F38F51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FEBE0021CAB0FC300E3F7C1 /* ReportsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsCollectionViewCell.h; sourceTree = "<group>"; };
 		1FEBE0031CAB0FC300E3F7C1 /* ReportsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsCollectionViewCell.m; sourceTree = "<group>"; };
+		3F6DD95B1CF114CE0030749E /* AVCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCommand.h; sourceTree = "<group>"; };
+		3F6DD95C1CF114CE0030749E /* AVCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCommand.m; sourceTree = "<group>"; };
+		3F6DD95E1CF116750030749E /* AVExportCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVExportCommand.h; sourceTree = "<group>"; };
+		3F6DD95F1CF116750030749E /* AVExportCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVExportCommand.m; sourceTree = "<group>"; };
 		3FFBAC161CD19AD600504C75 /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
 		3FFBAC171CD19AD600504C75 /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
 		417EB96A11B5203FF5F09FEF /* Pods-CaptApp Apple TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaptApp Apple TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaptApp Apple TV/Pods-CaptApp Apple TV.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +276,7 @@
 		1F63805E1C2E24D60051F986 /* CaptApp Apple TV */ = {
 			isa = PBXGroup;
 			children = (
+				3F6DD95A1CF113F70030749E /* Utilities */,
 				3FFBAC151CD19ABC00504C75 /* Categories */,
 				1F6380681C2E24D60051F986 /* Main.storyboard */,
 				1F6380621C2E24D60051F986 /* AppDelegate.h */,
@@ -330,6 +337,17 @@
 				1F64C4D61C7D790F00712829 /* Info.plist */,
 			);
 			path = captAppTopShelf;
+			sourceTree = "<group>";
+		};
+		3F6DD95A1CF113F70030749E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DD95B1CF114CE0030749E /* AVCommand.h */,
+				3F6DD95C1CF114CE0030749E /* AVCommand.m */,
+				3F6DD95E1CF116750030749E /* AVExportCommand.h */,
+				3F6DD95F1CF116750030749E /* AVExportCommand.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		3FFBAC151CD19ABC00504C75 /* Categories */ = {
@@ -595,7 +613,9 @@
 				3FFBAC181CD19AD600504C75 /* NSMutableArray+QueueAdditions.m in Sources */,
 				1F64C4E01C7F59CB00712829 /* LeaderBoardViewController.m in Sources */,
 				1F6380671C2E24D60051F986 /* ViewController.m in Sources */,
+				3F6DD9601CF116750030749E /* AVExportCommand.m in Sources */,
 				1F6380641C2E24D60051F986 /* AppDelegate.m in Sources */,
+				3F6DD95D1CF114CE0030749E /* AVCommand.m in Sources */,
 				1F6380611C2E24D60051F986 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
