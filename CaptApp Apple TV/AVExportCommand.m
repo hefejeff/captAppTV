@@ -15,18 +15,18 @@
     
     // Step 1
     // Create an outputURL to which the exported movie will be saved
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *outputURL = paths[0];
-    NSFileManager *manager = [NSFileManager defaultManager];
-    [manager createDirectoryAtPath:outputURL withIntermediateDirectories:YES attributes:nil error:nil];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *outputURL = paths[0];
+//    NSFileManager *manager = [NSFileManager defaultManager];
+//    [manager createDirectoryAtPath:outputURL withIntermediateDirectories:YES attributes:nil error:nil];
 
-    NSString *fileDirectory =  [NSString stringWithFormat:@"output-%d.mov",arc4random() % 1000];
-    outputURL = [outputURL stringByAppendingPathComponent:fileDirectory];
+    NSString *fileDirectory =  [NSString stringWithFormat:@"/output-%d.mov",arc4random() % 1000];
+//    outputURL = [outputURL stringByAppendingPathComponent:fileDirectory];
+                              
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    
+    cachesPath = [cachesPath stringByAppendingString:fileDirectory];
 
-    
-    // Remove Existing File
-    [manager removeItemAtPath:outputURL error:nil];
-    
     
     // Step 2
     // Create an export session with the composition and write the exported movie to the photo library
@@ -34,7 +34,7 @@
     
     self.exportSession.videoComposition = self.mutableVideoComposition;
     self.exportSession.audioMix = self.mutableAudioMix;
-    self.exportSession.outputURL = [NSURL fileURLWithPath:outputURL];
+    self.exportSession.outputURL = [NSURL fileURLWithPath:cachesPath];
     self.exportSession.outputFileType=AVFileTypeQuickTimeMovie;
     self.exportSession.shouldOptimizeForNetworkUse = YES;
     

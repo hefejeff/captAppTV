@@ -49,18 +49,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
-    NSFileManager *manager = [NSFileManager defaultManager];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *outputURL = paths[0];
-    
-    NSError *error = nil;
-    for (NSString *file in [manager contentsOfDirectoryAtPath:outputURL error:&error]) {
-        BOOL success = [manager removeItemAtPath:[NSString stringWithFormat:@"%@/%@", outputURL, file] error:&error];
-        if (!success || error) {
-            // it failed.
-        }
-    }
+//    NSFileManager *manager = [NSFileManager defaultManager];
+//
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *outputURL = paths[0];
+//    
+//    NSError *error = nil;
+//    for (NSString *file in [manager contentsOfDirectoryAtPath:outputURL error:&error]) {
+//        BOOL success = [manager removeItemAtPath:[NSString stringWithFormat:@"%@/%@", outputURL, file] error:&error];
+//        if (!success || error) {
+//            // it failed.
+//        }
+//    }
 }
 
 - (void)saveContext
