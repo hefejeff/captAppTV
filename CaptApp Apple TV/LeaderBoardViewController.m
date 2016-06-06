@@ -8,12 +8,14 @@
 
 #import "LeaderBoardViewController.h"
 #import "NSMutableArray+QueueAdditions.h"
+#import "MBProgressHUD.h"
 
 static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPlayerCurrentItemObservationContext;
 
 @interface LeaderBoardViewController ()
 
 @property (nonatomic, strong) AVPlayerViewController *playerViewController;
+@property (nonatomic, strong) MBProgressHUD *hud;
 @property BOOL isPlayerPresented;
 @property BOOL isVideoComposition;
 @property BOOL boolExportVideo;
@@ -67,6 +69,17 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
     self.playerViewController.player = reportQueuePlayer;
     
      [self.playerViewController.player addObserver:self forKeyPath:@"status" options:0 context:nil];
+    
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        self.hud.label.text = @"Loading clips information";
+ 
+    });
+    
+    
     
     [self downloadVideos:nil];
     
@@ -159,6 +172,10 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
             // Do not add a empty clip
             if (clips.count > 0)
             {
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.hud.label.text = @"Loading Videos...";
+                });
                 
                 __block CMTime current = kCMTimeZero;
                 
@@ -260,6 +277,12 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
         }];
         
     }
+    else
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.hud hideAnimated:YES];
+        });
+    }
     
     
 }
@@ -337,6 +360,11 @@ static void* const AVLoopPlayerCurrentItemObservationContext = (void*)&AVLoopPla
     // Validate if the Player was Displayed.
     if (!self.isPlayerPresented) {
         self.isPlayerPresented = YES;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.hud hideAnimated:YES];
+        });
+        
         //Adding the logo to the player
         UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waterMarkLogo"]];
         logo.frame = CGRectMake(50, 50, 252, 160);
