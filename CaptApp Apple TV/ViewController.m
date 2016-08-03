@@ -41,9 +41,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-    // Register Nib
-    [self.collectionView registerClass: [ReportsCollectionViewCell class] forCellWithReuseIdentifier:@"theCell"];
     
     [[UISegmentedControl appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"STHeitiSC-Medium" size:33.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
@@ -155,12 +152,6 @@
             [cell setNeedsLayout];
             
         });
-        
-        //
-        //        [cell.vid_thumb setImageWithURL:[NSURL URLWithString: logoURL ] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-        //        cell.marinaNameLabel.text = marinaName;
-        //    [cell setNeedsLayout];
-        
     });
     
     NSLog(@"State: %@", @"logo download");
