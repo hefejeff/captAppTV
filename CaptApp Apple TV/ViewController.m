@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ReportsCollectionViewCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 
 @interface ViewController ()
@@ -39,8 +41,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    [collectionView reloadData];
+
+    // Register Nib
+    [self.collectionView registerClass: [ReportsCollectionViewCell class] forCellWithReuseIdentifier:@"theCell"];
     
     [[UISegmentedControl appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"STHeitiSC-Medium" size:33.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
@@ -127,31 +130,40 @@
 {
     
     NSDictionary *tempDictionary= [pArray objectAtIndex:indexPath.row];
-
+    
     ReportsCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"theCell"
-                                        forIndexPath:indexPath];
-       
-        NSString *logoURL = [tempDictionary valueForKeyPath:@"logo.guid"];
-        NSString *marinaName = [tempDictionary valueForKeyPath:@"post_title"];
+                                                                    forIndexPath:indexPath];
+    NSString *logoURL = @"";
+    
+    if ([[tempDictionary objectForKey:@"logo"] isKindOfClass: [NSDictionary class]])
+    {
+        logoURL = [tempDictionary valueForKeyPath:@"logo.guid"];
+    }
+    
+    
+    NSString *marinaName = [tempDictionary valueForKeyPath:@"post_title"];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
-    
+        
         NSData *logoData = [NSData dataWithContentsOfURL:[NSURL URLWithString:logoURL]];
         UIImage *logo = [UIImage imageWithData:logoData];
         
-    dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             
-        [cell.vid_thumb setImage:logo];
-        cell.marinaNameLabel.text = marinaName;
-        [cell setNeedsLayout];
-       
+            [cell.vid_thumb setImage:logo];
+            cell.marinaNameLabel.text = marinaName;
+            [cell setNeedsLayout];
+            
         });
         
-        
-        
+        //
+        //        [cell.vid_thumb setImageWithURL:[NSURL URLWithString: logoURL ] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+        //        cell.marinaNameLabel.text = marinaName;
+        //    [cell setNeedsLayout];
         
     });
-     NSLog(@"State: %@", @"logo download");
+    
+    NSLog(@"State: %@", @"logo download");
     [self hideActivityIndicator];
     return cell;
 }
